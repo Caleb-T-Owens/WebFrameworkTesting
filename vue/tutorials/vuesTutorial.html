@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Vue test</title>
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+   <div id="hello">
+   {{ message}}
+   </div>
+
+   <div id="hello2">
+      <span v-bind:title="message">
+         When you over over me you see a message
+      </span>
+   </div>
+
+   <div id="hello3">
+      <span v-if="seen">
+         You can turn me off my setting app3.seen to false
+      </span>
+   </div>
+
+   <div id="hello4">
+      <ul>
+         <li v-for="item in list" v-bind:title="hover">
+            {{item.text}}
+         </li>
+      </ul>
+   </div>
+
+   <div id="hello5">
+      <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+   </div>
+
+   <div id="hello6">
+      <p>{{ message }}</p>
+      <input v-model="message">
+   </div>
+
+
+</body>
+<script>
+
+   let hello = new Vue({
+      el: "#hello",
+      data: {
+         message: "Hello, World!"
+      }
+   });
+
+   let hello2 = new Vue({
+      el: "#hello2",
+      data: {
+         message: 'You loaded this page on ' + new Date().toLocaleString()
+      }
+   });
+
+   let hello3 = new Vue({
+      el: "#hello3",
+      data: {
+         seen: true
+      }
+   });
+
+   let hello4 = new Vue({
+      el: "#hello4",
+      data: {
+         hover: "Hello, you can see me!",
+         list: [
+            { text: "Item One!"},
+            { text: "Item Two!"},
+            { text: "Item Three, Its-a Me!"}
+         ]
+      }
+   });
+
+   let hello5 = new Vue({
+      el: "#hello5",
+      data: {
+         message: "Whatever we want in here"
+      },
+      methods: {
+         reverseMessage: function () {
+            this.message = this.message.split('').reverse().join('');
+         }
+      }
+   });
+
+   let hello6 = new Vue({
+      el: "#hello6",
+      data: {
+         message: "Our message for example 6"
+      }
+   });
+
+
+</script>
+</html>
