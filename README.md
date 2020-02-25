@@ -1,6 +1,6 @@
 # WebFrameworkTesting
 
-Welcome to my web framework testing repo, I am making some test apps to help me decide what framework I would like to use for my planning app. I am licencing all of test apps under the MIT licence so you can use these however you like so feel free to modify them to see which framework you would like to use for your next projects too.
+Welcome to my web framework testing repo, I am making some test apps to help me decide what framework I would like to use for my planning app. I am licencing all of test apps under the [MIT licence](https://choosealicense.com/licenses/mit/) so you can use these however you like so feel free to modify them to see which framework you would like to use for your next projects too.
 
 ## What will this test app be like?
 
