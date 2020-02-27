@@ -1,8 +1,8 @@
 <template>
    <div id="app">
-      <documentation v-bind:seen="seen" v-if="seen.isSeen"/>
       <Header id="header" v-bind:seen="seen"/>
       <Main id="main-container"/>
+      <documentation v-bind:seen="seen" v-if="seen.isSeen"/>
    </div>
 </template>
 
@@ -40,8 +40,4 @@
     max-height: calc(100% - 80px);
     overflow: auto;
 }
-</style>
-
-<style scoped>
-
 </style>
