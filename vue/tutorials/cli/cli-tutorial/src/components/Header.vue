@@ -51,6 +51,7 @@
       background-color: rgb(85, 85, 85);
       display: flex;
       align-items: center;
+      position: fixed;
    }
    #name-container {
       width: 150px;
