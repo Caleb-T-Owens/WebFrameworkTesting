@@ -1,5 +1,5 @@
 <template>
-   <p v-on:click="link.function()">{{link.name}}</p>
+   <p id="link" v-on:click="link.function()">{{link.name}}</p>
 </template>
 
 <script>
@@ -11,6 +11,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+   #link {
+      color: white;
+   }
 </style>

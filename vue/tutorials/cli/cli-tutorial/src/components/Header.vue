@@ -1,40 +1,47 @@
 <template>
-
    <div id="header">
-      <p id="name">Test Page</p>
+      <div id="name-container">
+         <p id="name">Test Page</p>
+      </div>
       <div id="container-right">
-         <header-links  v-for="link in links" v-bind:key="link.name" v-bind:link="link"/>
+         <header-links class="link" v-for="link in links" v-bind:key="link.name" v-bind:link="link" />
       </div>
    </div>
 </template>
 
 <script>
-import HeaderLinks from "./HeaderLinks.vue";
+   import HeaderLinks from "./HeaderLinks.vue";
 
-export default {
-   name: "Header",
-   props: {
-   },
-   components: {
-      HeaderLinks
-   },
-   data () {
-      return {
-         links: [
-            {name: "Documentation", function: this.showDocumentation},
-            {name: "Help", function: this.showHelp}
-         ]
-      }
-   },
-   methods: {
-      showDocumentation() {
-         
+   export default {
+      name: "Header",
+      props: {
+         seen: Object
       },
-      showHelp() {
+      components: {
+         HeaderLinks
+      },
+      data() {
+         return {
+            links: [{
+                  name: "Documentation",
+                  function: this.showDocumentation
+               },
+               {
+                  name: "Help",
+                  function: this.showHelp
+               }
+            ]
+         }
+      },
+      methods: {
+         showDocumentation() {
+            this.seen.isSeen = true;
+         },
+         showHelp() {
 
+         }
       }
    }
-}
 </script>
 
 <style scoped>
@@ -45,10 +52,20 @@ export default {
       display: flex;
       align-items: center;
    }
+   #name-container {
+      width: 150px;
+   }
    #name {
       color: white;
       font-size: 20px;
       padding-left: 5px;
    }
-
+   #container-right {
+      width: calc(100% - 150px);
+      display: flex;
+      justify-content: flex-end;
+   }
+   .link {
+      margin-right: 15px;
+   }
 </style>
