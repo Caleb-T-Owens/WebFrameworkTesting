@@ -4,13 +4,13 @@
          <p id="name">Test Page</p>
       </div>
       <div id="container-right">
-         <header-links class="link" v-for="link in links" v-bind:key="link.name" v-bind:link="link" />
+         <header-link class="link" v-for="link in links" v-bind:key="link.name" v-bind:link="link" />
       </div>
    </div>
 </template>
 
 <script>
-   import HeaderLinks from "./HeaderLinks.vue";
+   import HeaderLink from "./HeaderLink.vue";
 
    export default {
       name: "Header",
@@ -18,7 +18,7 @@
          seen: Object
       },
       components: {
-         HeaderLinks
+         HeaderLink
       },
       data() {
          return {
