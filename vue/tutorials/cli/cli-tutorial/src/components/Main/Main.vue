@@ -40,7 +40,12 @@
    #main-container {
       padding-left: 50px;
       padding-right: 50px;
-      padding-top: 40px;
+      padding-top: 25px;
+      margin-top: 40px;
+         width: calc(100% - 100px);
+    height: calc(100% - 80px);
+    max-height: calc(100% - 80px);
+    overflow: auto;
    }
 
    p {

@@ -34,10 +34,5 @@
       padding: 0px;
       font-family: 'Roboto Mono';
    }
-   #main-container {
-   width: calc(100% - 100px);
-    height: calc(100% - 80px);
-    max-height: calc(100% - 80px);
-    overflow: auto;
-}
+
 </style>

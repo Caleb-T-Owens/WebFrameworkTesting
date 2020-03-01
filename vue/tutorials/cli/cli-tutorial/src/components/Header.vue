@@ -52,6 +52,7 @@
       display: flex;
       align-items: center;
       position: fixed;
+      top: 0px;
    }
    #name-container {
       width: 150px;
