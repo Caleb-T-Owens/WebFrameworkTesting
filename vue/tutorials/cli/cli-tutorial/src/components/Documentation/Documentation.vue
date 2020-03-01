@@ -26,7 +26,8 @@ export default {
 
 <style scoped>
    #container {
-      position: fixed;
+      position:fixed;
+      top: 0px;
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.205);
